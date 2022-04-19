@@ -79,7 +79,7 @@ contract Addresses {
         addr["DUMMY"]                       = 0xa3C21F23a782a0ACf0593ad6ECE57eFe353b966d;
         addr["PIP_DUMMY"]                   = 0xE8DBa19a6bCe486cAd0Cae4ce34eC9Dd01668e03;
         addr["MCD_JOIN_DUMMY_DBK"]            = 0x2980B0f694c4bf65E05DBDf9812173Ac622E4890;
-        addr["MCD_CLIP_DUMMY_DBK"]            = 0x930584650149D7579E21Aff84dd710d3028Ce002;
+        addr["MCD_CLIP_DUMMY_DBK"]            = 0xee17e68A3795689c01F70b50EF8C98BAFCEE4FD8;
         addr["MCD_CLIP_CALC_DUMMY_DBK"]       = 0x9f361C1Fa8B28f5206eEB06c7085D85a2d87672a;
     }
 }
