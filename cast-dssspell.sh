@@ -9,7 +9,7 @@ set -e
 }
 
 ### ChainLog
-CHANGELOG=0x7EafEEa64bF6F79A79853F4A660e0960c821BA50
+CHANGELOG=0x62f00ded84C4Bd69c4172Ef524f7Ee97C7d37624
 MCD_ADM=$(seth call "$CHANGELOG" 'getAddress(bytes32)(address)' "$(seth --to-bytes32 "$(seth --from-ascii "MCD_ADM")")")
 MCD_GOV=$(seth call "$CHANGELOG" 'getAddress(bytes32)(address)' "$(seth --to-bytes32 "$(seth --from-ascii "MCD_GOV")")")
 MCD_IOU=$(seth call "$CHANGELOG" 'getAddress(bytes32)(address)' "$(seth --to-bytes32 "$(seth --from-ascii "MCD_IOU")")")

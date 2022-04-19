@@ -25,7 +25,7 @@ import "dss-interfaces/dss/ChainlogAbstract.sol";
 import { DssSpellCollateralOnboardingAction } from "./Goerli-DssSpellCollateralOnboarding.sol";
 
 
-contract DssSpellAction is DssAction/*, DssSpellCollateralOnboardingAction*/ {
+contract DssSpellAction is DssAction, DssSpellCollateralOnboardingAction {
     // Provides a descriptive tag for bot consumption
     string public constant override description = "Goerli Spell";
 
@@ -37,12 +37,12 @@ contract DssSpellAction is DssAction/*, DssSpellCollateralOnboardingAction*/ {
     }
 
     function actions() public override {
-        // onboardNewCollaterals();
+        onboardNewCollaterals();
 
         address CHAINLOG = DssExecLib.LOG;
-        ChainlogAbstract(CHAINLOG).setAddress("FAUCET", 0x801891AFC61d0cB00575d61EEf89B6f2d6509B3d);
+        // ChainlogAbstract(CHAINLOG).setAddress("FAUCET", 0x801891AFC61d0cB00575d61EEf89B6f2d6509B3d);
 
-        DssExecLib.setChangelogVersion("0.2.7");
+        DssExecLib.setChangelogVersion("0.2.0");
     }
 }
 

@@ -23,6 +23,7 @@ contract Deployers {
 
     constructor() public {
         addr = [
+            0x3ec4699bEc79F8FF862C220Ef0a718689A1d09f4,
             0x23E91332984eEd55C88131C58295C8Dce379E2aB,
             0xb27B6fa77D7FBf3C1BD34B0f7DA59b39D3DB0f7e,
             0xda0fab060e6cc7b1C0AA105d29Bd50D71f036711,

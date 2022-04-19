@@ -83,9 +83,9 @@ contract DssSpellTest is GoerliDssSpellTestBase {
 
         // Insert new collateral tests here
         checkIlkIntegration(
-            "DUMMY-A",
-            GemJoinAbstract(addr.addr("MCD_JOIN_DUMMY_A")),
-            ClipAbstract(addr.addr("MCD_CLIP_DUMMY_A")),
+            "DUMMY-DBK",
+            GemJoinAbstract(addr.addr("MCD_JOIN_DUMMY_DBK")),
+            ClipAbstract(addr.addr("MCD_CLIP_DUMMY_DBK")),
             addr.addr("PIP_DUMMY"),
             false,
             false,
@@ -129,15 +129,15 @@ contract DssSpellTest is GoerliDssSpellTestBase {
         assertTrue(spell.done());
 
         // Insert new ilk registry values tests here
-        assertEq(reg.pos("DUMMY-A"), 1);
-        assertEq(reg.join("DUMMY-A"), addr.addr("MCD_JOIN_DUMMY_A"));
-        assertEq(reg.gem("DUMMY-A"), addr.addr("DUMMY"));
-        assertEq(reg.dec("DUMMY-A"), DSTokenAbstract(addr.addr("DUMMY")).decimals());
-        assertEq(reg.class("DUMMY-A"), 1);
-        assertEq(reg.pip("DUMMY-A"), addr.addr("PIP_DUMMY"));
-        assertEq(reg.xlip("DUMMY-A"), addr.addr("MCD_CLIP_DUMMY_A"));
-        //assertEq(reg.name("DUMMY-A"), "NAME"); // Token Name Not Present (DSToken, ONLY ON GOERLI)
-        assertEq(reg.symbol("DUMMY-A"), "DUMMY");
+        assertEq(reg.pos("DUMMY-DBK"), 1);
+        assertEq(reg.join("DUMMY-DBK"), addr.addr("MCD_JOIN_DUMMY_DBK"));
+        assertEq(reg.gem("DUMMY-DBK"), addr.addr("DUMMY-DBK"));
+        assertEq(reg.dec("DUMMY-DBK"), DSTokenAbstract(addr.addr("DUMMY")).decimals());
+        assertEq(reg.class("DUMMY-DBK"), 1);
+        assertEq(reg.pip("DUMMY-DBK"), addr.addr("PIP_DUMMY"));
+        assertEq(reg.xlip("DUMMY-DBK"), addr.addr("MCD_CLIP_DUMMY_DBK"));
+        //assertEq(reg.name("DUMMY-DBK"), "NAME"); // Token Name Not Present (DSToken, ONLY ON GOERLI)
+        assertEq(reg.symbol("DUMMY-DBK"), "DUMMY");
     }
 
     function testFailWrongDay() public {
