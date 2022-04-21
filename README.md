@@ -15,6 +15,25 @@ $ dapp update
 
 ### Adding Collaterals to the System
 
+After adding GemJoin Clipper and Clip Calc Adapters. Each of these will need to authorize the MCD_PAUSE_PROXY for the implementation.
+
+Authorization for Adapter:
+
+```
+# GEMJOIN
+MCD_PAUSE_PROXY=<MCD_PAUSE_PROXY address>
+MCD_JOIN_DUMMY_DBK=<MCD_JOIN_DUMMY_DBK address>
+seth send $MCD_JOIN_DUMMY_DBK "rely(address)" $MCD_PAUSE_PROXY
+
+# CLIP
+MCD_CLIP_DUMMY_DBK=<MCD_CLIP_DUMMY_DBK address>
+seth send $MCD_CLIP_DUMMY_DBK "rely(address)" $MCD_PAUSE_PROXY
+
+#CLIP_CALC
+MCD_CLIP_CALC_DUMMY_DBK=<MCD_CLIP_CALC_DUMMY_DBK address>
+seth send $MCD_CLIP_CALC_DUMMY_DBK "rely(address)" $MCD_PAUSE_PROXY
+```
+
 If the weekly executive needs to onboard a new collateral:
 
 1. Update the `onboardNewCollaterals()` function in `DssSpellCollateralOnboarding.sol`.
@@ -61,3 +80,8 @@ $ export ETH_GAS_PRICE=$(seth --to-wei 3 "gwei")
 $ make deploy
 
 ```
+
+Deployed Spell on 04/19/2022: Tx: 0x3b792884891c36d1dbb9c23ad23e14ee88c241a008eb1ea99e419963cb9727e6
+Contract Created: 0x3343868aE1820C7fB719D9B96C99762447A69C7A
+
+Goerli Spell Cast: https://goerli.etherscan.io/address/0x3343868aE1820C7fB719D9B96C99762447A69C7A

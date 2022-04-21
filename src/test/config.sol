@@ -125,12 +125,12 @@ contract Config {
             flap_lid:              150 * THOUSAND,          // in whole Dai units
             cat_box:               20 * MILLION,            // In whole Dai units
             dog_Hole:              100 * MILLION,           // In whole Dai units
-            esm_min:               50 * THOUSAND,          // In whole MKR units
+            esm_min:               100 * THOUSAND,          // In whole MKR units
             pause_authority:       chief,                   // Pause authority
             osm_mom_authority:     chief,                   // OsmMom authority
             flipper_mom_authority: chief,                   // FlipperMom authority
             clipper_mom_authority: chief,                   // ClipperMom authority
-            ilk_count:             3                       // Num expected in system
+            ilk_count:             2                      // Num expected in system
         });
 
         //
@@ -180,7 +180,7 @@ contract Config {
             line:         0,             // In whole Dai units  // Not checked here as there is auto line
             dust:         1 * THOUSAND,  // In whole Dai units
             pct:          0,             // In basis points
-            mat:          10000,         // In basis points
+            mat:          16000,         // In basis points
             liqType:      "clip",        // "" or "flip" or "clip"
             liqOn:        false,         // If liquidations are enabled
             chop:         1300,          // In basis points
@@ -195,7 +195,7 @@ contract Config {
             clip_cusp:    4000,
             clip_chip:    10,
             clip_tip:     300,
-            clipper_mom:  1,
+            clipper_mom:  0,
             cm_tolerance: 5000,
             calc_tau:     0,
             calc_step:    90,

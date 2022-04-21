@@ -120,7 +120,7 @@ contract DssSpellTest is GoerliDssSpellTestBase {
 
         // Insert new chainlog values tests here
         assertEq(chainLog.getAddress("FAUCET"), addr.addr('FAUCET'));
-        assertEq(chainLog.version(), "0.2.7");
+        assertEq(chainLog.version(), "0.2.0");
     }
 
     function testNewIlkRegistryValues() private { // make public to use
