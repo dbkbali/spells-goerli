@@ -39,7 +39,7 @@ contract DssSpellAction is DssAction, DssSpellCollateralOnboardingAction {
     function actions() public override {
         onboardNewCollaterals();
 
-        address CHAINLOG = DssExecLib.LOG;
+        // address CHAINLOG = DssExecLib.LOG;
         // ChainlogAbstract(CHAINLOG).setAddress("FAUCET", 0x801891AFC61d0cB00575d61EEf89B6f2d6509B3d);
 
         DssExecLib.setChangelogVersion("0.2.0");

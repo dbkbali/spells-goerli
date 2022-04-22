@@ -180,7 +180,7 @@ contract Config {
             line:         0,             // In whole Dai units  // Not checked here as there is auto line
             dust:         1 * THOUSAND,  // In whole Dai units
             pct:          0,             // In basis points
-            mat:          16000,         // In basis points
+            mat:          11000,         // In basis points
             liqType:      "clip",        // "" or "flip" or "clip"
             liqOn:        false,         // If liquidations are enabled
             chop:         1300,          // In basis points

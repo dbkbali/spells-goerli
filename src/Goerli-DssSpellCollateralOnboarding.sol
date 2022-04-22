@@ -45,10 +45,10 @@ contract DssSpellCollateralOnboardingAction {
     // --- DEPLOYED COLLATERAL ADDRESSES ---
 
     address constant DUMMY                 = 0xa3C21F23a782a0ACf0593ad6ECE57eFe353b966d;
-    address constant PIP_DUMMY             = 0xE8DBa19a6bCe486cAd0Cae4ce34eC9Dd01668e03;
-    address constant MCD_JOIN_DUMMY_DBK      = 0x2980B0f694c4bf65E05DBDf9812173Ac622E4890;
-    address constant MCD_CLIP_DUMMY_DBK      = 0xee17e68A3795689c01F70b50EF8C98BAFCEE4FD8;
-    address constant MCD_CLIP_CALC_DUMMY_DBK = 0x9f361C1Fa8B28f5206eEB06c7085D85a2d87672a;
+    address constant PIP_DUMMY             = 0xB5FD340c39D1bE12831ADf39BBFB25F693fb4566;
+    address constant MCD_JOIN_DUMMY_DBK      = 0xB94e246BC9945AFf7f940A32d4B33180eB8B3F74;
+    address constant MCD_CLIP_DUMMY_DBK      = 0x5013B096524E2F7eEe54cf14463bDCb9F4563061;
+    address constant MCD_CLIP_CALC_DUMMY_DBK = 0xD61FbA87aAA7C774a56DF4d4B2b41651640Abb1D;
 
     function onboardNewCollaterals() internal {
         // ----------------------------- Collateral onboarding -----------------------------
@@ -75,7 +75,7 @@ contract DssSpellCollateralOnboardingAction {
                 breakerTolerance:      5000, // Allows for a 50% hourly price drop before disabling liquidations
                 auctionDuration:       140 minutes,
                 permittedDrop:         4000,  // 40% price drop before reset
-                liquidationRatio:      16000, // 160% collateralization ratio
+                liquidationRatio:      11000, // 110% collateralization ratio
                 kprFlatReward:         300, // 300 Dai
                 kprPctReward:          10  // 0.1% of the purchased amount
             })
